@@ -64,7 +64,7 @@
       <h1><a href="/">Serenity</a></h1>
       <div id="subtitle-box">
         
-          <span id="subtitle">这是一个测试版网站</span>
+        <span id="subtitle"></span>
         
       </div>
       <div>
@@ -79,9 +79,26 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
 
 <!-- Subtitle -->
 
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['The soul&#39;s joy lies in doing.', 'Nought may endure but Mutability.', 'Cold hopes swarm like worms within our living clay.'],
+        startDelay: 100,
+        typeSpeed: 70,
+        loop: true,
+        backSpeed: 50,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
 <div id="main">
   <section class="outer">
   
@@ -215,7 +232,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020
+        2020-2021
         <i class="ri-heart-fill heart_icon"></i> Shucheng Cao
       </li>
     </ul>
