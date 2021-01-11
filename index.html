@@ -120,7 +120,7 @@
        
 <h2 itemprop="name">
   <a class="article-title" href="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/"
-    >个人主页的构建，编写与维护</a> 
+    >GitHub+Hexo 搭建个人网站详细教程</a> 
 </h2>
  
 
@@ -134,10 +134,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <blockquote>
-<p><em><font face=Times New Roman>Most notable distinction between living and inanimate beings is that the former maintain themselves by renewal.</font></em> </p>
-</blockquote>
-<p>这一篇博文主要是用于测试本网站的各项功能，以及让自己快速上手用Markdown编写博文。该博文转自知乎用户吴润的教程<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">《GitHub+Hexo 搭建个人网站详细教程》</a>,其内容这里不做任何修改。</p>
+  <p>这一篇博文主要是用于测试本网站的各项功能，以及让自己快速上手用Markdown编写博文。该博文转自知乎用户吴润的教程<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">《GitHub+Hexo 搭建个人网站详细教程》</a>,其内容这里不做任何修改。</p>
 <img src="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/image1.jpg" class="" title="[个人主页的构建，编写与维护]"> 
 
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着互联网浪潮的翻腾，国内外涌现出越来越多优秀的社交网站让用户分享信息更加便捷。然后，如果你是一个不甘寂寞的程序猿（媛），是否也想要搭建一个属于自己的个人网站，如果你曾经或者现在正有这样的想法，请跟随这篇文章发挥你的Geek精神，让你快速拥有自己的博客网站，写文章记录生活，享受这种从0到1的过程。</p>
@@ -145,7 +142,7 @@
 <h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h2><img src="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/image2.jpg" class="" title="[个人主页的构建，编写与维护]">  
 
 <p>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Heroku上，是搭建博客的首选框架。这里我们选用的是GitHub，你没看错，全球最大的同性恋交友网站（逃……）。Hexo同时也是GitHub上的开源项目，参见：<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">hexojs/hexo</a> 如果想要更加全面的了解Hexo，可以到其官网 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> 了解更多的细节，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。这里，默认各位猿/媛儿都知道GitHub就不再赘述。</p>
-<p>这是我的个人博客效果: <a target="_blank" rel="noopener" href="http://iamwr.com/">吴润 · RunDouble</a></p>
+<p><strong>这是我的个人博客效果</strong>: <a target="_blank" rel="noopener" href="http://iamwr.com/">吴润 · RunDouble</a></p>
 <p>下面正式从零开始搭建年轻人的第一个网站。</p>
 <h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><ul>
 <li>获得个人网站域名</li>
@@ -183,7 +180,7 @@
 <p>打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p>
 <img src="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/image7.jpg" class="" title="[个人主页的构建，编写与维护]"> 
 
-<p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。<br>在Git Bash中检测GitHub公钥设置是否成功，输入 ssh <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;</a> ：</p>
+<p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。<br>在Git Bash中检测GitHub公钥设置是否成功，输入 ssh <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a> ：</p>
 <img src="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/image8.jpg" class="" title="[个人主页的构建，编写与维护]"> 
 
 <p>如上则说明成功。这里之所以设置GitHub密钥原因是，通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当你推送的时候，git就会匹配你的私钥跟GitHub上面的公钥是否是配对的，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是正确合法的。</p>
@@ -219,7 +216,7 @@
 <h2 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h2><p>上面只是在本地预览，接下来要做的就是就是推送网站，也就是发布网站，让我们的网站可以被更多的人访问。在设置之前，需要解释一个概念，在blog根目录里的_config.yml文件称为站点配置文件，如下图</p>
 <img src="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/image13.jpg" class="" title="[个人主页的构建，编写与维护]"> 
 
-<p>进入根目录里的themes文件夹，里面也有个_config.yml文件，这个称为主题配置文件，如下图</p>
+<p>进入根目录里的themes文件夹，里面也有个_config.yml文件，这个称为<strong>主题配置文件</strong>，如下图</p>
 <img src="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/image14.jpg" class="" title="[个人主页的构建，编写与维护]"> 
 
 <p>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：</p>
@@ -268,11 +265,11 @@
 <h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><p>我们开始正式发布上线博客文章，在命令行中输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;博客名字&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>我们会发现在blog根目录下的source文件夹中的_post文件夹中多了一个 博客名字.md 文件，使用Markdown编辑器打开，就可以开始你的个人博客之旅了，Markdown常用的样式也就十来种，完全能够满足一般博文的样式要求，这是我的一篇博文内容示例：</p>
+<p>我们会发现在blog根目录下的source文件夹中的_post文件夹中多了一个 <strong>博客名字.md</strong> 文件，使用Markdown编辑器打开，就可以开始你的个人博客之旅了，Markdown常用的样式也就十来种，完全能够满足一般博文的样式要求，这是我的一篇博文内容示例：</p>
 <img src="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/image23.jpg" class="" title="[个人主页的构建，编写与维护]"> 
 
 <p>通过带有预览样式的Markdown编辑器实时预览书写的博文样式，也可以通过命令 hexo s –debug 在本地浏览器的localhost:4000 预览博文效果。写好博文并且样式无误后，通过hexo g、hexo d 生成、部署网页。随后可以在浏览器中输入域名浏览。</p>
-<h2 id="寻找图床"><a href="#寻找图床" class="headerlink" title="寻找图床"></a>寻找图床</h2><p>图床，当博文中有图片时，若是少量图片，可以直接把图片存放在source文件夹中，但这显然不合理的，因为图片会占据大量的存储的空间，加载的时候相对缓慢 ，这时考虑把博文里的图片上传到某一网站，然后获得外部链接，使用Markdown语法，<img src="%E5%A4%96%E9%83%A8%E9%93%BE%E6%8E%A5" alt="图片信息"> 完成图片的插入，这种网站就被成为图床。常见的简易的图床网站有：<a target="_blank" rel="noopener" href="http://www.tietuku.com/">贴图库图片外链</a> 国内算比较好的图床我认为有两个：新浪微博和 <a target="_blank" rel="noopener" href="https://www.qiniu.com/">七牛云</a> ，七牛云的使用方法可以参看其他文章。图床最重要的就是稳定速度快，所以在挑选图床的时候一定要仔细，下图是博文插入图片，使用图床外链的示例：</p>
+<h2 id="寻找图床"><a href="#寻找图床" class="headerlink" title="寻找图床"></a>寻找图床</h2><p>图床，当博文中有图片时，若是少量图片，可以直接把图片存放在source文件夹中，但这显然不合理的，因为图片会占据大量的存储的空间，加载的时候相对缓慢 ，这时考虑把博文里的图片上传到某一网站，然后获得外部链接，使用Markdown语法，<code>![图片信息](外部链接)</code> 完成图片的插入，这种网站就被成为图床。常见的简易的图床网站有：<a target="_blank" rel="noopener" href="http://www.tietuku.com/">贴图库图片外链</a> 国内算比较好的图床我认为有两个：新浪微博和 <a target="_blank" rel="noopener" href="https://www.qiniu.com/">七牛云</a> ，七牛云的使用方法可以参看其他文章。图床最重要的就是稳定速度快，所以在挑选图床的时候一定要仔细，下图是博文插入图片，使用图床外链的示例：</p>
 <img src="/2020/11/10/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E7%9A%84%E6%9E%84%E5%BB%BA%EF%BC%8C%E7%BC%96%E5%86%99%E5%92%8C%E7%BB%B4%E6%8A%A4/image24.jpg" class="" title="[个人主页的构建，编写与维护]"> 
 
 <h2 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h2><p>所谓的个性化设置就是根据个人需要添加不同的插件及功能。</p>
@@ -361,65 +358,6 @@
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/" rel="tag">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li></ul>
 
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-hello-world"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/11/09/hello-world/"
-    >Hello World</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/11/09/hello-world/" class="article-date">
-  <time datetime="2020-11-09T08:29:39.464Z" itemprop="datePublished">2020-11-09</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
     </footer>
   </div>
 
